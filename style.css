@@ -111,14 +111,31 @@ nav {
     color: var(--primary);
 }
 
-@media (max-width: 720px){
+/*socials*/
+.fa {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #0f172a;
+    transition: 0.3s;
+
+    font-size: 2rem !important;
+}
+
+.fa:hover {
+    color: #E63946;
+    transform: translate(-2px, -2px);
+}
+
+@media (max-width: 720px) {
     .nav-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .nav-links a{
+    .nav-links a {
         font-size: 0.8rem;
     }
 }
@@ -189,8 +206,8 @@ nav {
     box-shadow: 3px 3px 0 black;
 }
 
-@media (max-width: 720px){
-    .btn{
+@media (max-width: 720px) {
+    .btn {
         font-size: 1rem;
     }
 }
@@ -277,7 +294,8 @@ nav {
     .community p {
         font-size: 1rem;
     }
-    .hidden{
+
+    .hidden {
         display: none;
     }
 }
@@ -298,11 +316,11 @@ footer .brand {
 }
 
 @media (max-width: 720px) {
-    footer .font-marker{
+    footer .font-marker {
         font-size: 1rem;
     }
 
-    footer{
+    footer {
         font-size: 1rem;
     }
 }
