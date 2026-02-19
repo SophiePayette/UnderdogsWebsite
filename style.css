@@ -7,19 +7,13 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html {}
 
 body {
     font-family: "Roboto", sans-serif;
     background: #F8F9FA;
     color: #0f172a;
-}
-
-.dark body {
-    background: #1D3557;
-    color: #F1FAEE;
+    display: initial;
 }
 
 /* =========================
@@ -86,8 +80,22 @@ body {
 /* =========================
    NAVBAR
 ========================= */
+nav {
+    position: sticky;
+    z-index: 1000;
+    overflow: visible;
+    top: 0;
+    background-color: #F1FAEE;
+    border-bottom: 4px solid #0f172a;
+    transition: 0.5s;
+}
+
+.header-scrolled {
+    background-color: #FFD166;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
 .topnav {
-    overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -100,6 +108,8 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+
+    box-shadow: 2px 2px 0 black;
 }
 
 .topnav .icon {
@@ -123,6 +133,8 @@ body {
     border-radius: 50%;
     margin: 5px;
     box-shadow: 2px 2px 0 black;
+
+    background-color: #F1FAEE;
 }
 
 .nav-hidden .fa:hover {
@@ -133,7 +145,6 @@ body {
 @media screen and (max-width: 600px) {
 
     .topnav {
-        overflow: hidden;
         display: block;
     }
 
@@ -215,7 +226,6 @@ body {
     justify-content: center;
     text-align: center;
     border-bottom: 6px solid black;
-    overflow: hidden;
     background-color: rgb(148, 185, 228);
 }
 
@@ -259,6 +269,8 @@ body {
     transition: 0.2s;
     box-shadow: 5px 5px 0 black;
     margin: 10px;
+
+    background-color: #F1FAEE;
 }
 
 .btn-primary {
@@ -307,7 +319,7 @@ body {
     letter-spacing: 1px;
     box-shadow: 3px 3px 0 black;
     text-align: justify;
-    padding: 1%;
+    padding: 5px 10px;
     margin: 0 0 20px 0;
 
     background-color: #FFD166;

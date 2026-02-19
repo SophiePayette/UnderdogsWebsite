@@ -41,7 +41,7 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav>
+    <nav id="header">
         <div class="topnav" id="myTopnav">
             <a href="#home" class="btn">
                 <img src="img/Underdogs_Games_-_Black.png" alt="Underdogs Games logo" class="nav-logo">
@@ -93,7 +93,9 @@
             </div>
 
             <p class="font-marker description">
-                Heroes of Tomorrow is a management and turn-based combat game where you lead a company of flawed superheroes. Plan missions, balance profits, and manage public perception to keep your organization afloat!
+                Heroes of Tomorrow is a management and turn-based combat game where you lead a company of flawed
+                superheroes. Plan missions, balance profits, and manage public perception to keep your organization
+                afloat!
                 <br><br>
             </p>
 
@@ -182,6 +184,17 @@
                 x.className = "topnav";
             }
         }
+
+        const navEl = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navEl.classList.add('header-scrolled')
+            } else if(window.scrollY <= 50) {
+                navEl.classList.remove('header-scrolled')
+            }
+        })
+
     </script>
 
 </body>
